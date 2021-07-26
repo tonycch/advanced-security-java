@@ -70,3 +70,9 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
       continue-on-error: true
+      
+    - name: upload compound-build-tracer.log
+      uses: actions/upload-artifact@v2
+      with:
+        name: compound-build-tracer
+        path: /home/tonycch/actions-runner/_work/_temp/compound-build-tracer.log
